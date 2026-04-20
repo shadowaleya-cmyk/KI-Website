@@ -1954,12 +1954,231 @@ body::after {
 
 @keyframes blobFloat {
   0%, 100% {
-    transform: translate(0, 0) rotate(0deg);
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(-40px, 50px) rotate(90deg) scale(1.05);
+  }
+  50% {
+    transform: translate(30px, -40px) rotate(180deg) scale(0.95);
+  }
+  75% {
+    transform: translate(-20px, -30px) rotate(270deg) scale(1.02);
+  }
+}
+
+/* Additional organic floating elements */
+.blob-5 {
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle at 60% 30%, rgba(15, 125, 79, 0.15), transparent 60%);
+  border-radius: 65% 35% 42% 58% / 58% 45% 55% 42%;
+  bottom: 20%;
+  left: 5%;
+  animation: blobPulse 16s infinite ease-in-out;
+  animation-delay: 2s;
+}
+
+.blob-6 {
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(ellipse at 40% 50%, rgba(212, 160, 64, 0.12), transparent 70%);
+  border-radius: 72% 28% 66% 34% / 32% 58% 42% 68%;
+  top: 30%;
+  right: 5%;
+  animation: blobWave 18s infinite ease-in-out;
+  animation-delay: 5s;
+}
+
+.blob-7 {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at 45% 45%, rgba(15, 76, 122, 0.18), rgba(15, 125, 79, 0.08) 50%, transparent);
+  border-radius: 52% 48% 38% 62% / 58% 32% 68% 42%;
+  bottom: 40%;
+  right: 20%;
+  animation: blobRotate 24s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes blobPulse {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.15) translateY(-20px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes blobWave {
+  0%, 100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
   }
   33% {
-    transform: translate(-30px, 40px) rotate(120deg);
+    transform: translateX(30px) translateY(-30px) rotate(120deg);
   }
   66% {
-    transform: translate(30px, -40px) rotate(240deg);
+    transform: translateX(-30px) translateY(30px) rotate(240deg);
+  }
+}
+
+@keyframes blobRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Floating organic lines */
+.organic-line {
+  position: fixed;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.4;
+}
+
+.organic-line-1 {
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(15, 76, 122, 0.5), transparent);
+  top: 25%;
+  left: 10%;
+  transform: rotate(-15deg);
+  animation: lineFloat 15s infinite ease-in-out;
+}
+
+.organic-line-2 {
+  width: 280px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(15, 125, 79, 0.4), transparent);
+  bottom: 35%;
+  right: 15%;
+  transform: rotate(25deg);
+  animation: lineFloat 18s infinite ease-in-out;
+  animation-delay: 3s;
+}
+
+.organic-line-3 {
+  width: 150px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(212, 160, 64, 0.35), transparent);
+  top: 60%;
+  left: 30%;
+  transform: rotate(-35deg);
+  animation: lineFloat 20s infinite ease-in-out;
+  animation-delay: 6s;
+}
+
+@keyframes lineFloat {
+  0%, 100% {
+    transform: translateX(0) translateY(0) rotate(var(--rotation, 0deg));
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateX(30px) translateY(-20px) rotate(var(--rotation, 0deg));
+    opacity: 0.8;
+  }
+}
+
+/* Floating spheres - pure geometric */
+.floating-sphere {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  z-index: 1;
+}
+
+.sphere-1 {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at 35% 35%, rgba(15, 125, 79, 0.25), rgba(15, 125, 79, 0.05));
+  top: 15%;
+  right: 12%;
+  animation: sphereFloat 22s infinite ease-in-out;
+  box-shadow: inset -20px -20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.sphere-2 {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at 40% 40%, rgba(15, 76, 122, 0.2), rgba(15, 76, 122, 0.03));
+  bottom: 25%;
+  left: 8%;
+  animation: sphereFloat 19s infinite ease-in-out;
+  animation-delay: 4s;
+  box-shadow: inset -15px -15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.sphere-3 {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 30% 30%, rgba(212, 160, 64, 0.18), transparent 70%);
+  top: 45%;
+  right: 5%;
+  animation: sphereFloat 26s infinite ease-in-out;
+  animation-delay: 2s;
+  box-shadow: inset -25px -25px 50px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes sphereFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(40px, -30px) scale(0.95);
+  }
+  50% {
+    transform: translate(-50px, 40px) scale(1.05);
+  }
+  75% {
+    transform: translate(30px, 20px) scale(0.98);
+  }
+}
+
+/* Organic wave elements */
+.wave-line {
+  position: fixed;
+  pointer-events: none;
+  opacity: 0.3;
+  mix-blend-mode: overlay;
+}
+
+.wave-1 {
+  width: 400px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(15, 76, 122, 0.1), rgba(15, 125, 79, 0.3), rgba(15, 76, 122, 0.1));
+  top: 35%;
+  right: 0;
+  animation: waveMove 12s linear infinite;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(15, 125, 79, 0.2);
+}
+
+.wave-2 {
+  width: 500px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(212, 160, 64, 0.15), rgba(15, 76, 122, 0.25), rgba(212, 160, 64, 0.15));
+  bottom: 20%;
+  left: 0;
+  animation: waveMove 15s linear infinite reverse;
+  animation-delay: 2s;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(212, 160, 64, 0.15);
+}
+
+@keyframes waveMove {
+  0% {
+    transform: translateX(0) skewX(0deg);
+  }
+  50% {
+    transform: translateX(20px) skewX(3deg);
+  }
+  100% {
+    transform: translateX(0) skewX(0deg);
   }
 }
