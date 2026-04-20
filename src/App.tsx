@@ -10,6 +10,10 @@ export default function App() {
     <LanguageProvider>
       <BrowserRouter>
         <CursorGlow />
+        <div className="blob-decoration blob-1"></div>
+        <div className="blob-decoration blob-2"></div>
+        <div className="blob-decoration blob-3"></div>
+        <div className="blob-decoration blob-4"></div>
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
