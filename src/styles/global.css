@@ -11,8 +11,8 @@
   --color-gradient-1: #0f4c7a;
   --color-gradient-2: #0f7d4f;
   --color-gradient-3: #d4a040;
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Poppins', sans-serif;
+  --font-heading: 'Space Mono', 'Courier New', monospace;
+  --font-body: 'Inter', sans-serif;
   --max-width: 1200px;
   --transition: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -110,7 +110,7 @@ img {
   font-weight: 500;
   color: var(--color-text-secondary);
   transition: all var(--transition);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
   position: relative;
 }
 
@@ -283,7 +283,7 @@ img {
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--color-accent);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
   padding: 0.5rem 1.25rem;
@@ -619,7 +619,7 @@ img {
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.24em;
   color: var(--color-text-secondary);
   margin-bottom: 1.5rem;
   opacity: 0.6;
@@ -648,7 +648,7 @@ img {
   opacity: 0.35;
   white-space: nowrap;
   transition: opacity var(--transition);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
 }
 
 .trust-banner__item:hover {
@@ -832,7 +832,7 @@ img {
   font-family: var(--font-heading);
   font-size: 3rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.16em;
   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -935,7 +935,7 @@ img {
   font-weight: 600;
   color: var(--color-accent);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.16em;
   margin-bottom: 1rem;
 }
 
@@ -1605,7 +1605,7 @@ img {
   color: var(--color-text-muted);
   margin-bottom: 1rem;
   font-style: italic;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
 }
 
 .snake-game__wrapper {
