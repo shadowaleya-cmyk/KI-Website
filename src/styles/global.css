@@ -1,13 +1,13 @@
 :root {
-  --color-bg: #0a0a0f;
-  --color-bg-secondary: #12121a;
-  --color-bg-card: #1a1a2e;
-  --color-bg-card-hover: #22223a;
-  --color-text: #e8e8f0;
-  --color-text-secondary: #9898b0;
+  --color-bg: #f8f8fc;
+  --color-bg-secondary: #ffffff;
+  --color-bg-card: #ffffff;
+  --color-bg-card-hover: #f5f5f9;
+  --color-text: #1a1a2e;
+  --color-text-secondary: #666666;
   --color-accent: #6C63FF;
   --color-accent-hover: #5a52e0;
-  --color-border: #2a2a3e;
+  --color-border: #e0e0e8;
   --color-gradient-1: #6C63FF;
   --color-gradient-2: #00C9A7;
   --color-gradient-3: #FF6B6B;
@@ -78,9 +78,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(10, 10, 15, 0.7);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(24px) saturate(1.8);
-  border-bottom: 1px solid rgba(108, 99, 255, 0.08);
+  border-bottom: 1px solid rgba(108, 99, 255, 0.12);
 }
 
 .navbar__logo {
@@ -138,7 +138,7 @@ img {
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  background: rgba(26, 26, 46, 0.6);
+  background: rgba(26, 26, 46, 0.08);
   border: 1px solid var(--color-border);
   border-radius: 999px;
   padding: 0.2rem;
